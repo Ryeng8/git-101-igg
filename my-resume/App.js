@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ResumeFromScreen from './screens/ResumeForm'
+import ResumeDetailScreen from './screens/ResumeDetail'
+
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -20,6 +22,12 @@ function App() {
         <Stack.Screen 
         name="ResumeForm" 
         options={{title : 'Resume Form'}} 
+        component={ResumeFromScreen}
+         />
+               <Stack.Navigator>
+        <Stack.Screen 
+        name="ResumeDtail" 
+        options={{title : 'Resume Dtail'}} 
         component={ResumeFromScreen}
          />
       </Stack.Navigator>
